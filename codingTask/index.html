@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="./scripts/main.js"></script>
+    <link rel='stylesheet' type='text/css' href='./sdk/maps.css' />
+    <!-- Could use bundler here but not sure if it's allowed -->
+    <script src="./scripts/components/Task.js"></script>
+    <script src="./scripts/components/TaskContainer.js"></script>
+    <script src='./sdk/maps-web.min.js'></script>
+    <title>TODO App</title>
+</head>
+
+<body onload="init()">
+    <script type="text/javascript" src='./scripts/interactions/interactions.js'></script>
+    <div id="header-container" class="header-container">
+        <h1 class="page-title">TODO App</h1>
+    </div>
+    <div class="app-container">
+        <div class="task-creator-container">
+            <div class="new-task-form">
+                <h2 id="form-title">New Task</h2>
+                <label>Task name</label>
+                <input type="text" placeholder="Task name" id="name-input">
+                <label>Category</label>
+                <select name="cars" id="category-input">
+                    <option value="Work">Work</option>
+                    <option value="Event">Event</option>
+                    <option value="Appointment">Appointment</option>
+                    <option value="Shopping">Shopping</option>
+                </select>
+                <label>Longitude</label>
+                <input type="text" placeholder="Longitude" id="long-input">
+                <label>Latitude</label>
+                <input type="text" placeholder="Latitude" id="lat-input">
+                <div id="button-container">
+                    <button id="add-task" class="add-task">Create Task</button>
+                </div>
+            </div>
+            <div class="map-container">
+                <div id='map' class='map'></div>
+                <script src='./scripts/map/map.js'></script>
+            </div>
+        </div>
+            <div class="task-container" id="tsk_cnt">
+                <div class="list-placeholder">Your tasks will be displayed here.</div>
+            </div>
+    </div>
+
+    <div class="footer">
+        Created by Michał Białecki 2019
+    </div>
+
+</body>
+
+</html>
